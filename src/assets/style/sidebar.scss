@@ -1,0 +1,132 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 03:36:36
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 02:41:23
+*/
+
+@import "./variable.scss";
+.asidebar-wrapper {
+    float: left; // width: px2percent(200);
+    width: 25%;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+}
+
+.aside-bar {
+    width: 100%;
+    background-color: #FFFFFF;
+    .menu {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        li {
+            cursor: pointer;
+            min-height: 50px;
+            line-height: 50px;
+            transition: all 0.2s ease-in
+        }
+        .menu-item {
+            height: auto;
+            border-bottom: 1px solid #EEEEEE;
+            >span,
+            >ul {
+                display: none;
+            }
+            .menu-header {
+                transition: all 0.1s ease-in-out;
+                display: block;
+                width: 100%;
+                padding: 0 10px;
+                box-sizing: border-box;
+                font-weight: 700;
+                color: rgba(79, 179, 158, 1);
+            }
+            .arrow {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    margin-top: -4px;
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid rgba(79, 179, 158, 1);
+                    border-right: 1px solid rgba(79, 179, 158, 1);
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+            &.active.open {
+                .menu-header {
+                    color: #FFFFFF;
+                    background-color: rgba(79, 179, 158, 1);
+                }
+                .arrow {
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        margin-top: -4px;
+                        border-top: 1px solid #FFFFFF;
+                        border-right: 1px solid #FFFFFF;
+                        transform: rotate(135deg);
+                        -webkit-transform: rotate(135deg);
+                    }
+                }
+            }
+            &.open {
+                >span,
+                >ul {
+                    display: block;
+                }
+                .menu-header {
+                    color: #FFFFFF;
+                    background-color: rgba(79, 179, 158, 1);
+                }
+                .arrow {
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        border-top: 1px solid #FFFFFF;
+                        border-right: 1px solid #FFFFFF;
+                        transform: rotate(135deg);
+                        -webkit-transform: rotate(135deg);
+                    }
+                }
+            }
+        }
+        .drop-down {
+            box-sizing: border-box;
+            >li {
+                padding-left: 30px;
+                border-top: 1px solid #EEEEEE;
+                position: relative;
+            }
+        }
+        color: rgba(79, 179, 158, 1);
+    }
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 100%;
+    }
+    .router-link-exact-active.router-link-active {
+        color: #FFFFFF;
+        font-size: 18px;
+        background-color: rgba(79, 179, 158, 1);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .asidebar-wrapper {
+        display: none;
+    }
+}

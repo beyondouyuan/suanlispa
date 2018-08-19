@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 21:50:14
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-07 10:37:53
+*/
+
+$baseDesign: 1920;
+
+$per100: 100%;
+$per90: 90%;
+$per80: 80%;
+$per70: 70%;
+$per60: 60%;
+$per50: 50%;
+$per40: 40%;
+$per30: 30%;
+$per20: 20%;
+$per10: 10%;
+$per5: 5%;
+
+$fontSize: 1rem;
+
+$baseFontSize: 14;
+
+$baseColor: #00B49D;
+
+@function px2percent($px, $context: $baseDesign) {
+    @return $per100 * ($px/$context)
+};
+@function px2rem($px, $baseFontSize: $baseFontSize) {
+    @return $px / $baseFontSize * 1rem;
+};

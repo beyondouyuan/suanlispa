@@ -1,0 +1,33 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-22 03:22:51
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 03:38:32
+*/
+@import "./variable.scss";
+.submenu-container {
+  padding-bottom: 1rem;
+  background-color: #F5F5F5;
+}
+.submenu-wrapper {
+  width: $per100;
+  height: 45px;
+  line-height: 45px;
+
+  .submenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    .submenu-item {
+      width: 33.33%;
+      text-align: center;
+      &.active {
+        a {
+          color: $baseColor;
+        }
+
+      }
+    }
+  }
+}

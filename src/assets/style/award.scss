@@ -1,0 +1,74 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-07 11:27:24
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 14:55:29
+*/
+
+@import "./variable.scss";
+
+.table-box {
+    width: 100%;
+    overflow-x: scroll;
+}
+.tips-box {
+    margin: px2percent(10, 595) 0 px2percent(18, 595) 0;
+    .pre-tips,
+    .copy-link {
+        display: inline-block;
+    }
+    .copy-link {
+        margin-left: px2percent(12, 595);
+        color: $baseColor;
+        cursor: pointer;
+    }
+}
+
+.qrcode {
+    margin-bottom: px2percent(40, 595);
+    .qr-code {
+        display: inline-block;
+    }
+    >img {
+        width: 140px;
+        height: 140px;
+        background-color: #AAAAAA;
+    }
+    span {
+        margin-left: px2percent(12, 595);
+        color: $baseColor;
+        cursor: pointer;
+    }
+}
+
+.rule-list {
+    margin-top: px2percent(20, 595);
+    p {
+        line-height: 1.8em;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .tips-box {
+        margin: .5rem 0;
+
+        .copy-link {
+            margin-left: 0;
+        }
+    }
+    .qrcode {
+        margin-bottom: 1rem;
+        text-align: center;
+        .qr-code {
+            display: block;
+            margin-bottom: .5rem;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        span {
+            margin-left: 0;
+        }
+    }
+}

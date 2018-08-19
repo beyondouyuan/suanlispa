@@ -1,0 +1,442 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 01:53:49
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 20:00:41
+*/
+
+@import "./variable.scss";
+
+.contract-container {
+    width: $per100;
+    height: $per100;
+    padding: px2percent(20) px2percent(360);
+    .contract-content-table {
+        color: #999999;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    }
+    .title-label {
+        margin-bottom: px2percent(12, 1200);
+        h2 {
+            font-size: 16px;
+            color: $baseColor;
+            display: inline-block;
+            border-bottom: 2px solid $baseColor;
+            padding-bottom: px2percent(5, 1200);
+        }
+    }
+    .sub-tips {
+        line-height: 40px;
+        text-align: center;
+    }
+    .sub-title {
+        padding: px2percent(20, 1200);
+        h3 {
+            font-size: 16px;
+            color: #777777;
+        }
+    }
+    .contract-detail {
+        width: px2percent(780, 1200);
+        display: inline-block;
+    }
+    .qrcode {
+        float: right;
+        width: 30%; // margin: px2percent(60, 1200);
+        text-align: center;
+        >img {
+            width: 80%; // height: 140px;
+            background-color: #AAAAAA;
+        }
+        p {
+            color: $baseColor;
+        }
+    }
+    .btn-box {
+        text-align: center;
+        padding: px2percent(40, 1200) 0;
+        .btn {
+            width: px2percent(257, 1200);
+            height: 46px;
+            line-height: 46px;
+            border: 1px solid $baseColor;
+            border-radius: 23px;
+            font-size: 18px;
+            color: #FFFFFF;
+            background-color: $baseColor;
+            &:last-child {
+                margin-left: px2percent(50, 1200);
+            }
+        }
+        .btn.cancel {
+            color: $baseColor;
+            background: transparent;
+        }
+    }
+    .title {
+        width: $per100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >h2 {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .link-box {
+            margin-left: px2percent(18, 700);
+            background-color: #FFFFFF;
+            padding: 0 1em;
+            border-radius: 15px;
+        }
+    }
+}
+
+.main-content_box {
+    margin-top: px2percent(54, 760);
+    .main-top {
+        border-bottom: 1px solid #A2C7Fe;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: px2percent(20, 700);
+    }
+    .mian-item {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        >span {
+            color: #F0F0F0;
+            &:first-child {
+                font-size: 14px;
+                margin-bottom: px2percent(14, 700 / 4);
+            }
+            &:last-child {
+                font-size: 16px;
+                margin-bottom: px2percent(20, 700 / 4);
+            }
+        }
+    }
+}
+
+.contract-wrapper,
+.contract-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contract-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contract-wrapper {
+    display: flex;
+}
+
+
+.contract-item-left {
+    width: px2percent(760, 1200);
+    padding: px2percent(28, 1200) px2percent(30, 1200) px2percent(20, 1200) px2percent(30, 1200);
+}
+
+.contract-wrapper {
+    color: #FFFFFF;
+    &:nth-child(odd) {
+        margin-bottom: px2percent(30, 1200);
+        .contract-item-left {
+            background-color: #6B9AE2;
+            .title {
+
+                .link-box {
+                    color: #6B9AE2;
+                }
+            }
+        }
+    }
+    &:nth-child(even) {
+        padding-bottom: px2percent(50, 1200);
+        .contract-item-left {
+            background-color: #E05453;
+            .title {
+                .link-box {
+                    color: #E05453;
+                }
+            }
+            .main-content_box {
+                .main-top {
+                    border-bottom: 1px solid #FF7776;
+                }
+            }
+        }
+    }
+}
+
+.contract-wrapper {
+    &:nth-child(odd) {
+        .contract-item-right {
+            color: #6B9AE2;
+            border: 1px solid #6B9AE2;
+            .bottom-btn {
+                .btn {
+                    color: #6B9AE2;
+                    border: 1px solid #6B9AE2;
+                }
+            }
+        }
+    }
+    &:nth-child(even) {
+        .contract-item-right {
+            color: #E05453;
+            border: 1px solid #E05453;
+            .bottom-btn {
+                .btn {
+                    color: #E05453;
+                    border: 1px solid #E05453;
+                }
+            }
+        }
+    }
+}
+
+.top-tips {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.amount {
+    h2 {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    >span {
+        margin-left: .8em;
+        font-size: 14px;
+    }
+}
+
+.main-input {
+    margin-top: px2percent(48, 430);
+    input {
+        width: px2percent(260, 430);
+        height: 46px;
+        line-height: 46px;
+        padding: 0 1em;
+        font-size: 16px;
+        color: #999999;
+        background-color: #FFFFFF;
+        border: 1px solid #999999;
+        outline: none;
+    }
+    >span {
+        font-size: 12px;
+        color: #999999;
+        margin-left: px2percent(20, 430);
+    }
+}
+
+.contract-item-right {
+    flex: 1;
+    margin-left: px2percent(10, 1200);
+    background-color: #FFFFFF;
+}
+
+.main-form_box {
+    padding: px2percent(30, 430) px2percent(30, 430) px2percent(20, 430) px2percent(20, 430);
+}
+
+.order-detail {
+    p {
+        margin: 20px 0;
+    }
+    span {
+        color: #e74c3c;
+        float: right;
+    }
+}
+
+.radio {
+    margin-top: px2percent(30, 430);
+    span {
+        font-size: 14px;
+        color: #999999;
+    }
+}
+
+.bottom-btn {
+    margin-top: px2percent(24, 430);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 px2percent(30, 430) 0 px2percent(30, 430);
+    .btn {
+        width: px2percent(170, 430);
+        height: 34px;
+        line-height: 34px;
+        border: none;
+        outline: none;
+        border-radius: 17px;
+        font-size: 14px;
+        font-weight: bolder;
+        background: transparent;
+    }
+}
+
+
+
+
+
+
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .contract-container {
+        padding: px2percent(60, $baseDesign) px2percent(100, $baseDesign);
+    }
+}
+
+
+
+
+// 小屏幕pc
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+    .contract-container {
+        padding: px2percent(30, $baseDesign) px2percent(100, $baseDesign);
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .contract-container {
+        padding: 2% 3%;
+        margin-bottom: 1rem;
+        .contract-detail {
+            width: $per100;
+            display: block;
+        }
+        .qrcode {
+            float: nono;
+            width: $per100;
+            margin-top: 1rem;
+            >img {
+                width: $per80;
+            }
+        }
+        .btn-box {
+            text-align: center;
+            padding: 1rem 0;
+            .btn {
+                width: $per80;
+                margin: 0 auto;
+                height: 3rem;
+                line-height: 3rem;
+                border: 1px solid $baseColor;
+                border-radius: 1.5rem;
+                font-size: 1.2rem;
+                color: #FFFFFF;
+                background-color: $baseColor;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+            .btn.cancel {
+                color: $baseColor;
+                background: transparent;
+            }
+        }
+        .contract-content-table {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: #FFFFFF;
+        }
+    }
+    table {
+        th {
+            width: 40% !important;
+        }
+    }
+    .contract-item-left {
+        width: $per100;
+        padding: 2% 3%
+    }
+    .contract-wrapper {
+        display: block;
+        padding-bottom: 1rem;
+    }
+    .contract-wrapper {
+        &:nth-child(odd) {
+            margin-bottom: 1rem;
+            .contract-item-left {
+                background-color: #6B9AE2;
+                .title {
+                    .link-box {
+                        color: #6B9AE2;
+                    }
+                }
+            }
+        }
+        &:nth-child(even) {
+            padding-bottom: 1rem;
+            .contract-item-left {
+                background-color: #E05453;
+                .title {
+                    .link-box {
+                        color: #E05453;
+                    }
+                }
+                .main-content_box {
+                    .main-top {
+                        border-bottom: none;
+                    }
+                    .mian-item {
+                        >span {
+                            &:last-child {
+                                border-bottom: 1px solid #FF7776;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contract-item-right {
+        margin-top: 3%;
+        margin-left: 0;
+    }
+    .main-content_box {
+        margin-top: 1rem;
+        overflow-x: scroll;
+        .main-top {
+            border-bottom: none;
+        }
+        .main-bottom {
+            margin-top: 1rem;
+        }
+        .mian-item {
+            >span {
+                height: 5vh;
+                width: 40vw;
+                &:first-child {
+                    margin-bottom: .5rem;
+                }
+                &:last-child {
+                    margin-bottom: .5rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid #A2C7Fe;
+                }
+            }
+        }
+    }
+}

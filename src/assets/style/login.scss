@@ -1,0 +1,284 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 02:42:58
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-18 23:50:35
+*/
+
+@import "./variable.scss";
+$ctxbaseWidth: 850;
+.login-container {
+    width: $per100;
+    height: $per100;
+    position: relative;
+    background: url('/static/image/register/regist_bg.jpg') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    .select-box {
+        width: 30%;
+        height: 50px;
+        border-radius: 5px; //盒子阴影修饰作用,自己随意
+        box-shadow: 0 0 5px #ccc;
+        position: relative;
+    }
+    .top {
+        height: 40px;
+        width: 100%;
+        background: transparent;
+        a {
+            font-size: 14px;
+            color: white;
+            float: right;
+        }
+    }
+    .login-wrapper {
+        width: px2percent(480, $ctxbaseWidth);
+        position: absolute;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        overflow: hidden;
+        .login-main {
+            width: $per100;
+            height: auto;
+            overflow: hidden;
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            .left {
+                width: px2percent(490, $ctxbaseWidth);
+                height: $per100;
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: $per100; // height: auto;
+                }
+            }
+            .register-left {
+                width: px2percent(528, $ctxbaseWidth);
+                height: $per100;
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: $per100; // height: auto;
+                }
+            }
+            .login-box {
+                height: $per100;
+                width: px2percent(428, $ctxbaseWidth);
+                padding: 0 px2percent(30, $ctxbaseWidth);
+                margin-top: px2percent(48, $ctxbaseWidth);
+                box-sizing: border-box;
+                overflow: hidden;
+                flex-grow: 1;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+    .login-list {
+        width: $per100;
+        .input-box {
+            width: $per100;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            margin: px2percent(36, 428) auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            >div {
+                height: $per100;
+                line-height: $per100;
+            }
+            .box-left {
+                width: $per50;
+                input {
+                    width: $per100;
+                }
+            }
+            .box-right {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                >img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .verify-btn {
+                font-size: 12px;
+                height: 36px;
+                line-height: 36px;
+            }
+        }
+        input {
+            width: $per100;
+            height: $per100;
+            font-size: 14px;
+            padding: 0 0 0 16px;
+            box-sizing: border-box;
+            line-height: 48px;
+            border: 1px solid #DDDDDD;
+            background-color: #FAFAFA;
+        }
+    }
+    .btn {
+        margin: px2percent(50, 428) auto;
+        width: $per100;
+        border-radius: 20px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        background-color: $baseColor;
+        &.verify-btn {
+            height: 36px;
+            line-height: 36px;
+            font-size: 18px;
+        }
+    }
+    .title-label {
+        text-align: center;
+        h2 {
+            font-size: 24px;
+            color: #777777; // font-weight: 700;
+        }
+        span {
+            color: #0083ff
+        }
+    }
+    .tips-box {
+        // padding: 100px 0 75px 50px;
+        .inner {
+            margin-top: 20px;
+        }
+        .login {
+            margin-top: 90px;
+        }
+        .login-link {
+            font-size: 20px;
+            color: #0083ff
+        }
+    }
+}
+
+.input-item {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.auth-link {
+    position: absolute;
+    z-index: 100;
+    right: 14px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 100%;
+    line-height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.mobile-box {
+    flex-grow: 1
+}
+
+select {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0; // appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; // border: 1px solid #DDDDDD; // padding-left: 60px;
+}
+
+
+@media screen and (max-width:767px) {
+    .login-container {
+        padding: 2% 3%;
+        .top {
+            height: 3.5rem;
+            text-align: center;
+            background: transparent;
+            a {
+                font-size: .8rem;
+                float: none;
+            }
+        }
+        .login-wrapper {
+            width: $per100;
+            .login-main {
+                background: transparent;
+                .left {
+                    display: none;
+                }
+                .register-left {
+                    display: none;
+                }
+                .login-box {
+                    width: $per100;
+                    background: transparent;
+                }
+            }
+        }
+        .login-list {
+            .input-box {
+                height: 3rem;
+                line-height: 3rem;
+                font-size: .8rem;
+                margin: 4% auto;
+                .verify-btn {
+                    font-size: .7rem;
+                    height: 3rem;
+                    line-height: 3rem;
+                }
+            }
+            input {
+                font-size: .8rem;
+                padding: 0 0 0 1rem;
+                height: 3rem;
+                line-height: 3rem;
+                color: #FFFFFF;
+                border-radius: .5rem;
+                background: transparent;
+            }
+        }
+        .btn {
+            margin: 5% auto;
+            width: $per100;
+            border-radius: 1rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            font-size: 1rem;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            background-color: $baseColor;
+            &.verify-btn {
+                height: 3rem;
+                line-height: 3rem;
+                font-size: 18px;
+            }
+        }
+    }
+    .input-item {
+        width: 100%;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+    }
+}

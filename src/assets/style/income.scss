@@ -1,0 +1,211 @@
+@import "./variable.scss";
+
+.income-container {
+    .title-label {
+        position: relative;
+        border-bottom: 1px solid #ebebeb;
+    }
+}
+
+.income-container {
+    .table-box {
+        box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+        // padding-bottom: px2percent(100, 820);
+        overflow-x: scroll;
+        .tab-pannel {
+            padding: px2percent(20, 820);
+            span {
+                display: inline-block;
+                text-align: center;
+                width: px2percent(100, 820);
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #D0D0D0;
+                border: 1px solid #D0D0D0;
+                border-radius: 14px;
+                &:not(:first-child) {
+                    margin-left: px2percent(20, 820);
+                }
+                &.active {
+                    color: $baseColor;
+                    border-color: $baseColor
+                }
+            }
+        }
+    }
+}
+
+.income-detail {
+    margin-top: px2percent(48, 820);
+    margin-bottom: px2percent(58, 820);
+    .detail-box {
+        box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+    }
+}
+
+.income-type {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 px2percent(30, 820);
+    margin-top: 50px;
+}
+
+.type-item {
+    width: $per50;
+    padding: px2percent(10, 820);
+    background: url('/static/image/bgcolor01.png') no-repeat;
+    background-size: cover;
+    background-color: #4fb39e;
+    &:last-child {
+        margin-left: px2percent(40, 820);
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-size: 14px;
+        color: #FFFFFF;
+        &:last-child {
+            margin-top: px2percent(10, 820 / 2);
+            font-size: 26px;
+        }
+    }
+}
+
+
+.detail-item {
+    padding: px2percent(30, 820) px2percent(95, 820);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEEEEE;
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 14px;
+            color: #999999;
+            &:last-child {
+                margin-top: 12px;
+                font-size: 22px;
+                color: #777777;
+            }
+        }
+    }
+}
+
+.income-select-box {
+    width: 20%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@media screen and (max-width:767px) {
+    .income-container {
+        .title-label {
+            position: relative;
+            border-bottom: none;
+        }
+    }
+    .income-container {
+        .table-box {
+            .tab-pannel {
+                width: auto;
+                padding: .5rem;
+                white-space: nowrap;
+                overflow: visible;
+                overflow-x: auto;
+                span {
+                    display: inline-block;
+                    text-align: center;
+                    width: 5rem;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    color: #D0D0D0;
+                    border: 1px solid #D0D0D0;
+                    border-radius: 14px;
+                    &:not(:first-child) {
+                        margin-left: px2percent(20, 820);
+                    }
+                    &.active {
+                        color: $baseColor;
+                        border-color: $baseColor
+                    }
+                }
+            }
+        }
+    }
+    .income-type {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .type-item {
+        width: $per100;
+        padding: 1rem 0;
+        background: url('/static/image/bgcolor01.png') no-repeat;
+        background-size: cover;
+        background-color: #4fb39e;
+        &:last-child {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+        span {
+            font-size: 14px;
+            color: #FFFFFF;
+            &:last-child {
+                margin-top: .5rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .income-detail {
+        margin-top: 1rem;
+        margin-bottom: 1.2rem;
+        overflow-x: hidden;
+        .detail-box {
+            box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+            overflow-x: scroll;
+        }
+    }
+    .detail-item {
+        width: auto;
+        padding: .5rem 0;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            span {
+                width: 50vw;
+                text-align: center;
+                font-size: 14px;
+                color: #999999;
+                &:last-child {
+                    margin-top: 12px;
+                    font-size: 22px;
+                    color: #777777;
+                    border-bottom: 1px solid #EEEEEE;
+                    padding: .5rem 0;
+                }
+            }
+        }
+    }
+    .income-select-box {
+        width: $per40;
+        height: $per100;
+    }
+}

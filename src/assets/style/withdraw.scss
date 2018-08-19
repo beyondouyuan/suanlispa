@@ -1,0 +1,113 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-16 23:12:03
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 18:49:03
+*/
+
+@import "./variable.scss";
+
+.withdraw-container {
+    width: $per100;
+    padding: px2percent(30) px2percent(360);
+    padding-bottom: px2percent(130);
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.withdraw-box {
+    width: $per100;
+    overflow: hidden;
+    .input-item {
+        width: 80%;
+        height: 46px;
+        line-height: 46px;
+        box-sizing: border-box;
+        position: relative;
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+        .select-box {
+            width: 20%;
+            height: 100%;
+            border-radius: 5px; //盒子阴影修饰作用,自己随意
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .auth-btn {}
+    .auth-link {
+        position: absolute;
+        z-index: 100;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        line-height: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+    input {
+        height: 100%;
+        line-height: 100%;
+        width: 100%;
+        padding: 0 14px;
+        box-sizing: border-box;
+        border: 1px solid #EEEEEE;
+    }
+}
+
+.btn-box {
+    margin-top: px2percent(20, 595);
+    .btn {
+        width: $per80;
+        height: 36px;
+        line-height: 36px;
+        color: #FFFFFF;
+        border-radius: 15px;
+        background-color: #00B49D;
+    }
+}
+
+.title-label {
+    margin-bottom: px2percent(20, 1200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+        font-size: 16px;
+        color: $baseColor;
+        display: inline-block;
+        border-bottom: 2px solid $baseColor;
+        padding-bottom: px2percent(16, 1200);
+    }
+    .withdraw-tips {
+        font-size: 14px;
+        color: #FF6957;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .withdraw-box {
+        width: $per100;
+        overflow: hidden;
+        text-align: center;
+        .input-item {
+            width: $per100;
+            &:not(:first-child) {
+                margin-top: .8rem;
+            }
+        }
+    }
+    .btn-box {
+        margin-top: 1rem;
+        .btn {
+            width: $per100;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            font-size: 1rem;
+        }
+    }
+}

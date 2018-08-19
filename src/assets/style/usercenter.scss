@@ -1,0 +1,106 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-22 02:41:01
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 19:37:53
+*/
+
+@import "./variable.scss";
+.usercenter-container {
+  width: $per100;
+  height: $per100;
+  background-color: #F4F4F4;
+}
+.usercenter-wrapper {
+    width: $per100;
+    margin-top: 1rem;
+    border-top: 1px solid #EEEEEE;
+    height: $per100;
+    background-color: #F4F4F4;
+}
+.user-box {
+    background-image: linear-gradient(to bottom, #C1FFF6, #5DB7A9);
+    height: 20vh;
+    .user-info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 10%;
+        .avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: 2px solid #EEEEEE;
+            background-color: #E5E5E5;
+        }
+        .nickname {
+            font-size: 1.2rem;
+            font-weight: bolder;
+            color: #FFFFFF;
+            margin-left: .6rem;
+        }
+    }
+}
+.logout-item {
+    border-top: 1px solid #EEEEEE;
+    margin-top: 1rem;
+}
+.usercenter-bar {
+    width: 100%;
+    background-color: #FFFFFF;
+    .usercenter {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        height: $per100;
+        background-color: #F4F4F4;
+        li {
+            cursor: pointer;
+            height: $per100;
+            background-color: #FFFFFF;
+        }
+        .usercenter-item {
+            border-bottom: 1px solid #EEEEEE;
+            .menu-header {
+                transition: all 0.1s ease-in-out;
+                display: block;
+                width: 100%;
+                padding: 0 10px;
+                height: 100%;
+                box-sizing: border-box;
+                font-weight: 700;
+                color: rgba(79, 179, 158, 1);
+            }
+            .arrow {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    margin-top: -4px;
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid #777777;
+                    border-right: 1px solid #777777;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+        }
+        color: rgba(79, 179, 158, 1);
+    }
+    a {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        width: 100%;
+    }
+    .router-link-exact-active.router-link-active {
+        color: #FFFFFF;
+        font-size: 18px;
+        background-color: rgba(79, 179, 158, 1);
+    }
+}

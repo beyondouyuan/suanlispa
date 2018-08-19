@@ -1,0 +1,310 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 02:42:25
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 19:12:03
+*/
+
+@import "./variable.scss";
+.user-container {
+    width: $per100;
+    min-height: calc(100vh);
+    height: $per100;
+    padding: px2percent(50) px2percent(360); // overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.out-container {
+    width: $per100;
+    min-height: calc(100vh);
+    height: $per100;
+}
+
+.title-label {
+    margin-bottom: px2percent(12, 595);
+    h2 {
+        font-size: 16px;
+        color: $baseColor;
+        display: inline-block;
+        border-bottom: 2px solid $baseColor;
+        padding-bottom: px2percent(5, 595);
+    }
+}
+
+.user-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.view-main_wrapper {
+    height: 100%;
+    margin-left: calc(25% + 80px);
+    width: calc(75% - 80px);
+    margin-bottom: 1rem;
+    // overflow: hidden;
+}
+.prop-container {
+    width: $per100;
+    // overflow: hidden;
+}
+.m-view_main {
+    width: $per100;
+    height: $per100;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    right: -100%;
+    background-color: #fff;
+    &.open {
+        right: 0;
+    }
+}
+
+.title-flag {
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    color: #00B49D;
+    border-bottom: 2px solid #00B49D;
+}
+
+.content-box {
+    width: $per100;
+    margin-top: px2percent(10, 595);
+    border-top: 1px solid #EEEEEE;
+    .content-item {
+        height: 3rem;
+        line-height: 3rem;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    label {
+        display: inline-block;
+        width: $per20;
+        font-size: 14px;
+        color: #777777;
+    }
+    input {
+        display: inline-block;
+        width: $per40;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        box-sizing: border-box;
+        color: #CCCCCC;
+        border: 1px solid #E5E5E5;
+    }
+    .u-txt {
+        color: #00B49D;
+    }
+    .auth-btn {
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        .btn {
+            height: 100%;
+            color: #00B49D;
+            border: 1px solid #00B49D;
+            background: transparent;
+        }
+    }
+    .content-item {
+        &:not(:first-child) {
+            margin-top: px2percent(14, 595)
+        }
+    }
+}
+
+.btn-box {
+    margin-top: px2percent(40, 595);
+    .btn {
+        width: px2percent(80, 595);
+        height: 36px;
+        line-height: 36px;
+        color: #FFFFFF;
+        background-color: #00B49D;
+    }
+}
+
+.action-box {
+    box-sizing: border-box;
+    padding: px2percent(14, 595);
+    .t-tip {
+        font-size: 14px; // padding: 0 px2percent(14, 595)
+    }
+    .link-txt {
+        color: #00B49D;
+    }
+}
+
+.select-tab {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.select-box {
+    width: 20%;
+    height: 100%;
+    border-radius: 5px; //盒子阴影修饰作用,自己随意
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.setting-container {
+    .pass-level-box {
+        display: flex;
+        align-items: center;
+        .pass-level {
+            margin: 0 px2percent(12, 595);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #EE9D56;
+        }
+        .level-box {
+            margin-left: 6px;
+            width: 80px;
+            height: 4px;
+            position: relative;
+            background-color: #EEEEEE;
+            .level-line {
+                position: absolute;
+                height: 100%;
+                background-color: #EE9D56;
+            }
+            .level-line-0 {
+                width: 25%;
+            }
+            .level-line-1 {
+                width: 50%;
+            }
+            .level-line-2 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.setting-list {
+
+    li {
+        box-sizing: border-box;
+        padding: px2percent(14, 595);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #E5E5E5;
+        box-sizing: border-box;
+        > div {
+            font-size: 14px;
+            box-sizing: border-box;
+            &:nth-child(2) {
+                flex: 1;
+                padding: 0 px2percent(12, 595);
+                span {
+                    padding: 0 1rem;
+                    &:first-child {
+                        position: relative;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: $per50;
+                            left: $per100;
+                            transform: translateY(-50%);
+                            width: 1px;
+                            height: 1em;
+                            background-color: #EEEEEE;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .user-container {
+        padding: px2percent(20) px2percent(100);
+    }
+}
+
+
+
+
+// 小屏幕pc
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+    .user-container {
+        padding: px2percent(20) px2percent(100);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .user-container {
+        padding: 0;
+    }
+    .view-main_wrapper {
+        margin-left: 0;
+        width: $per100;
+        height: $per100;
+        padding: 1% 3%;
+    }
+    .title-flag {
+        display: none;
+    }
+    .action-box {
+        font-size: 14px;
+        padding: .5rem 0;
+    }
+    .setting-container {
+        .pass-level-box {
+            justify-content: space-between;
+            .pass-level {
+                flex: 1;
+                justify-content: flex-start;
+                margin-left: 3rem;
+            }
+        }
+    }
+    .setting-list {
+        li {
+            padding: .5rem 0;
+            > div {
+                font-size: 14px;
+                &:nth-child(2) {
+                    flex: 1;
+                    padding: 0 .4rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        &:first-child {
+                            width: 30%;
+                            padding: 0;
+                            padding-right: .5rem;
+                        }
+                        &:last-child {
+                            width: 67%;
+                            padding: 0;
+                            padding-left: .5rem;
+                        }
+                    }
+                }
+                &:last-child {
+                    width: 30%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

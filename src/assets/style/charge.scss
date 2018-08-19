@@ -1,0 +1,100 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-16 23:12:03
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 18:44:26
+*/
+
+@import "./variable.scss";
+
+.charge-container {
+    width: $per100; // padding: px2percent(30) px2percent(360);
+    padding-bottom: px2percent(130);
+    background-color: #FFFFFF;
+}
+
+.title-label {
+    margin-bottom: px2percent(20, 1200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+        font-size: 16px;
+        color: $baseColor;
+        display: inline-block;
+        border-bottom: 2px solid $baseColor;
+        padding-bottom: px2percent(16, 1200);
+    }
+    .charge-tips {
+        font-size: 14px;
+        color: #FF6957;
+    }
+}
+
+.charge-box {
+    padding: 0 px2percent(16, 1200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .copy-link {
+        margin-left: 2em;
+    }
+    .pre-tips {
+        margin-top: 1em;
+    }
+    img {
+        width: 184px;
+        height: 184px;
+    }
+}
+
+.explain {
+    margin-top: px2percent(20, 1200);
+    font-size: 14px;
+    color: #777777;
+    p {
+        height: 1.8em; // line-height: 1.8em;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .charge-container {
+        padding-bottom: 1rem;
+    }
+    .title-label {
+        margin-bottom: 1rem;
+        align-items: flex-start;
+        flex-direction: column;
+        h2 {
+            padding-bottom: .5rem;
+        }
+        .charge-tips {
+            margin-top: 1rem;
+        }
+    }
+    .charge-box {
+        padding: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        .copy-link {
+            display: block;
+            margin-top: .5rem;
+            margin-left: 0;
+        }
+        .pre-tips {
+            margin-top: .5rem;
+        }
+        img {
+            width: 184px;
+            height: 184px;
+        }
+    }
+    .explain {
+        margin-top: 1rem;
+        p {
+            height: 3rem; // line-height: 1.8em;
+        }
+    }
+}

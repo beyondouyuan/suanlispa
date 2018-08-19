@@ -1,0 +1,306 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 02:13:49
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-27 00:01:48
+*/
+
+@import "./variable.scss";
+@import './form.scss';
+
+.trade-container {
+    width: $per100;
+    height: $per100;
+    padding: px2percent(30) px2percent(360);
+    .title-label h2 {
+        font-size: 16px;
+        color: #00b49d;
+        line-height: 25px;
+        margin-top: 20px;
+        padding: 0.83333%;
+    }
+}
+
+.tab-container {
+    width: $per100;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #FFFFFF;
+    .tab-item {
+        padding-bottom: 8px;
+        &:first-child {
+            margin-right: 20px;
+        }
+        &.active {
+            border-bottom: 4px solid $baseColor;
+        }
+    }
+}
+
+.content-container {
+    width: $per100;
+    margin-top: 20px;
+}
+
+.info-wrapper {
+    .bar-panel {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .panel-item {
+        font-size: 14px;
+        color: #FFFFFF;
+        background-color: $baseColor;
+    }
+    .panel-left {
+        width: $per70;
+    }
+    .item-list {
+        display: flex;
+        justify-content: space-between;
+        &:first-child {
+            margin: 0 px2percent(84, 595) * 0.7;
+            padding-top: px2percent(46, 595) * 0.7;
+            padding-bottom: px2percent(30, 595) * 0.7;
+            border-bottom: 1px solid #FFFFFF;
+        }
+        &:last-child {
+            margin: 0 px2percent(100, 595) * 0.7;
+            padding-top: px2percent(18, 595) * 0.7;
+            padding-bottom: px2percent(24, 595) * 0.7;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .big-text {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        .item-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+    .contract-link {
+        flex: 1;
+        margin-left: px2percent(34, 595) * 0.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $per100;
+            height: $per100;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.echart-wrapper {
+    width: $per100;
+    overflow-x: scroll; // height: 400px;
+    margin-top: 3rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    .echart-box {
+        width: 100%;
+    }
+    .echart-bar {
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem; // height: 100px;
+        span {
+            width: 4rem;
+            text-align: center;
+            padding: 0 1rem;
+            cursor: pointer;
+            &.active {
+                color: $baseColor;
+                border-bottom: 2px solid $baseColor;
+            }
+        } // position: absolute;
+    }
+    .main {
+        width: $per100;
+        overflow-x: scroll;
+        height: 300px;
+        margin-top: 1rem;
+        background-color: #FFFFFF;
+    }
+}
+
+.server-wrapper {
+    width: $per100;
+    margin-top: px2percent(30, 1200);
+    padding: px2percent(10, 1200);
+    overflow: hidden;
+    display: flex;
+    .server-item {
+        width: $per50;
+        background-color: #FFFFFF;
+    }
+    .server-box {
+        width: px2percent(592, 1200);
+        display: flex;
+        box-sizing: border-box;
+
+        >div {
+            width: $per50;
+            flex: 1;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+            &:first-child {
+                margin-right: px2percent(20, 592);
+            }
+        }
+    }
+    .server-price {
+        margin-left: px2percent(38, 1200);
+        th {
+            font-size: 14px;
+        }
+        td {
+            // border: none;
+            padding: 6px;
+            font-size: 12px;
+        }
+    }
+}
+
+.server-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.server-price {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.prict-header {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+}
+
+.entrust-wrapper {
+    width: $per100;
+    margin-top: 70px;
+    .entrust-item {
+        width: $per100;
+        min-height: 200px;
+        margin-top: 20px;
+        background-color: #FFFFFF;
+    }
+}
+
+
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .trade-container {
+        padding: px2percent(20) px2percent(100);
+    }
+}
+
+
+
+
+// 小屏幕pc
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+    .trade-container {
+        padding: px2percent(20) px2percent(100);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .trade-container {
+        padding: 2% 3%;
+    }
+    .info-wrapper {
+        .bar-panel {
+            flex-wrap: wrap;
+        }
+        .panel-left {
+            width: $per100;
+            overflow-x: scroll;
+        }
+        .item-list {
+            width: $per100;
+            .item {
+                span {
+                    width: 40vw;
+                    height: 5vh;
+                    &:first-child {
+                        margin-bottom: .3rem;
+                    }
+                    &:last-child {
+                        margin-bottom: .3rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid #FFFFFF;
+                    }
+                }
+            }
+            &:first-child {
+                margin: 0 1rem;
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: none;
+            }
+            &:last-child {
+                margin: 0 1rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+        .contract-link {
+            margin-left: 0;
+            margin-top: 1rem;
+            height: 2rem;
+            line-height: 2rem;
+        }
+    }
+    .server-wrapper {
+        margin-top: 2%;
+        padding: 1%;
+        display: block;
+        .server-item {
+            width: $per100;
+            background-color: #FFFFFF;
+        }
+        .server-box {
+            width: $per100;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+
+            >div {
+                width: $per50;
+                flex: 1;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+                &:first-child {
+                    margin-right: px2percent(20, 592);
+                }
+            }
+        }
+        .server-price {
+            margin-left: 0;
+        }
+    }
+    .entrust-wrapper {
+        margin-top: 5%;
+        .entrust-item {
+            min-height: 20vh;
+            margin-top: 2%;
+        }
+    }
+}

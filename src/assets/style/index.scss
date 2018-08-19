@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*
+* @Author: beyondouyuan
+* @Date:   2018-04-26 16:17:40
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 17:10:30
+*/
+@import "./variable.scss";
+@import "./mixin.scss";
+@import './reset.scss';
+@import './menu.scss';
+@import './home.scss';
+@import './footer.scss';
+@import './style.scss';
+
+
+
+.layout-container {
+    min-height: 100vh;
+    width: $per100;
+}
+
+.conetnt-container {
+    min-height: calc(100vh);
+    height: $per100;
+    width: $per100;
+    background-color: #FFFFFF;
+}
+.header-container {
+  width: $per100;
+  // height: 120px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #000000;
+}
+
+.pagination-container {
+  width: $per100;
+  text-align: right;
+  margin: px2percent(20) 0;
+  overflow-x: scroll;
+}
+.table-box {
+  overflow-x: scroll;
+}
+@media screen and (max-width:767px) {
+  .header-container {
+    height: auto;
+  }
+}
+.cursor {
+  cursor: pointer;
+}
+.link-a {
+  @extend .cursor;
+  color: $baseColor;
+}
+
+.box-shadow {
+  box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+}

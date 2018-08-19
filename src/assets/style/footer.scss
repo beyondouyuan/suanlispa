@@ -1,0 +1,177 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 01:37:56
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-18 01:03:57
+*/
+
+.footer {
+    width: $per100;
+    height: auto;
+    padding: px2percent(60) px2percent(360);
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #F4F4F4;
+    background-color: #333333;
+    a {
+        color: #F4F4F4;
+    }
+}
+
+.item-top {
+    width: $per100;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #AAAAAA;
+    padding: px2percent(30) 0;
+    ul {
+        width: px2percent(180, 1200);
+        li {
+            color: #AAAAAA;
+            margin-bottom: px2percent(14, 180);
+            &:first-child {
+                font-size: 18px;
+                color: #AAAAAA;
+                font-weight: 700;
+                height: 40px;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #CCCCCC;
+                }
+                >a {
+                    &:after {
+                        position: absolute;
+                        z-index: 2;
+                        left: 0;
+                        top: 100%;
+                        content: '';
+                        width: 66px;
+                        height: 2px;
+                        background-color: #00B49D;
+                    }
+                }
+            }
+            line-height: 1.5em;
+        }
+    }
+}
+
+.item-bottom {
+    padding: px2percent(30) 0;
+    ul {
+        width: $per100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            width: $per50;
+            margin-bottom: px2percent(14, 180);
+        }
+    }
+    ul li .server-icon {
+        width: px2percent(130, 600); // 335px / 1440px - 30 * 2px
+        img {
+            width: 100%;
+        }
+    }
+    .copy-right {
+        text-align: right;
+    }
+}
+
+
+
+
+
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .footer {
+        padding: 0 px2percent(100);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .header {
+        padding: 0 px2percent(50);
+        .navigation {
+            .nav {
+                &.nav-menu {
+                    li:first-child {
+                        margin-right: px2percent(135, 1024);
+                    }
+                    li:not(:first-child) {
+                        margin-left: px2percent(30, 1204);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 小屏幕pc
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+    .footer {
+        padding: 0 px2percent(100);
+    }
+    .item-bottom {
+        padding: px2percent(20) 0;
+        ul {
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .footer {
+        padding: px2percent(20) px2percent(100);
+    }
+    .item-top {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        ul {
+            // flex: 1;
+            width: 33.3%;
+            font-size: .5rem;
+            box-sizing: border-box;
+            &:not(:first-child) {
+                padding-left: 1rem;
+            }
+            &:last-child {
+                margin-top: 1rem;
+                padding-left: 0;
+            }
+            li {
+                &:first-child {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .item-bottom {
+        padding: px2percent(15) 0;
+        ul {
+            li {
+                width: 45%;
+                margin-bottom: px2percent(10, 180);
+                &.copy-right {
+                    width: 55%;
+                }
+            }
+        }
+        ul li .server-icon {
+            margin-top: px2percent(100);
+            width: 55%; // 335px / 1440px - 30 * 2px
+        }
+    }
+}

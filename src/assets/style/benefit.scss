@@ -1,0 +1,353 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 02:42:07
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-25 22:20:29
+*/
+
+@import "./variable.scss";
+.benefit-container {
+    width: $per100;
+    padding: 0 px2percent(360);
+    padding-bottom: px2percent(130);
+    background-color: #FFFFFF;
+    .select-box {
+        width: 15%;
+        height: $per100;
+        border-radius: 5px; //盒子阴影修饰作用,自己随意
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        top: 50%;
+        transform: translateY(-50%);
+        &:nth-of-type(2) {
+            left: 22%;
+        }
+        &:nth-of-type(3) {
+            left: 32%;
+        }
+    }
+}
+
+.bar-box {
+    padding: px2percent(18) 0 px2percent(18) 0;
+    margin: .5rem 0;
+}
+
+.counter-card {
+    position: relative;
+    width: $per100;
+}
+
+.input-list {
+    width: $per50;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: .4rem 0;
+    box-sizing: border-box;
+}
+
+.counter-top {
+    width: $per100;
+    position: relative;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    justify-content: space-between;
+    padding: .4rem 0;
+    box-sizing: border-box;
+    .input-box_item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        position: relative;
+        input {
+            width: px2percent(180, 1200);
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .btn {
+            width: $per20;
+            margin: 0 px2percent(20, 1200);
+            height: 32px;
+            line-height: 32px;
+            color: #FFFFFF;
+            border-radius: 4px;
+            background-color: $baseColor;
+        }
+        .txt {
+            font-size: 14px;
+            color: $baseColor;
+        }
+        &.input-box_big {
+            margin-left: 48%;
+        }
+
+        .input-box_right {
+            flex: 1;
+            margin-left: 2%;
+        }
+        .input-right_big {
+            flex: 1;
+            margin-left: 2%;
+        }
+    }
+}
+
+.trans {
+    width: 2%;
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    >img {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+.trans-box {
+    width: 15%;
+    position: absolute;
+    left: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: $per100;
+    line-height: $per100;
+    border: 1px solid #00B49D;
+    input {
+        width: $per100;
+        height: $per100;
+        line-height: $per100;
+        box-sizing: border-box;
+        padding-left: 1rem;
+    }
+}
+
+.counter-bottom {
+    width: $per100;
+    margin-top: px2percent(16, 1200);
+    overflow: hidden;
+    .counter-item {
+        width: $per50;
+        float: left;
+        height: 140px;
+        border: 1px solid #D8D8D8;
+        &:last-child {
+            border-left: none;
+        }
+        overflow: hidden;
+    }
+    textarea {
+        width: $per100;
+        height: $per100;
+        overflow: hidden;
+        padding: px2percent(10, 600);
+        box-sizing: border-box;
+        resize: none;
+        font-size: 14px;
+    }
+    .area::-webkit-input-placeholder {
+        color: #999999;
+    }
+    .counter-result {
+        background-color: #EEEEEE;
+    }
+}
+
+.tips {
+    font-size: 14px;
+    color: #999999;
+    padding: px2percent(10, 1200);
+    text-align: center;
+}
+
+.counter-table {
+    width: $per100;
+    margin-top: px2percent(40, 1200);
+}
+
+.title-label {
+    h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: $baseColor;
+    }
+}
+
+.table-box {
+    margin-top: px2percent(20, 1200);
+}
+
+
+
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .benefit-container {
+        padding: px2percent(20) px2percent(100);
+        padding-bottom: px2percent(60);
+    }
+}
+
+
+
+
+// 小屏幕pc
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+    .benefit-container {
+        padding: px2percent(20) px2percent(100);
+        padding-bottom: px2percent(60);
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .benefit-container {
+        padding: 2% 3%;
+    }
+
+    .trans {
+        width: 10%;
+        position: absolute;
+        left: 46%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        >img {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+    .input-list {
+        width: $per100;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding: .4rem 0;
+        box-sizing: border-box;
+    }
+    .counter-top {
+        display: block;
+        margin-bottom: .5rem;
+        .select-box {
+        width: 45%;
+        height: $per100;
+        border-radius: 5px; //盒子阴影修饰作用,自己随意
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        &:nth-of-type(2) {
+            left: 56%;
+        }
+        &:nth-of-type(3) {
+            left: 32%;
+        }
+    }
+        .input-box_item {
+            height: 5rem;
+            width: $per100;
+            margin-left: 0;
+            padding-bottom: 3%;
+            display: block;
+            .input-box_right {
+                margin-left: 0;
+            }
+            input {
+                width: 35%;
+                height: 2rem;
+                line-height: 2rem;
+            }
+            .btn {
+                width: 20%;
+                margin: 0;
+                height: 2rem;
+                line-height: 2rem;
+            }
+            .txt {
+                display: block;
+                margin-top: .3rem;
+                font-size: .8rem;
+            }
+        }
+    }
+    .trans {
+        margin: 0
+    }
+    .counter-bottom {
+        width: $per100;
+        margin-top: 6rem;
+        .counter-item {
+            height: 10vh;
+        }
+        textarea {
+            padding: 2%;
+            font-size: .8rem;
+        }
+    }
+    .tips {
+        font-size: .8rem;
+        padding: 2% 0;
+        text-align: left;
+    }
+    .counter-table {
+        .counter-top {
+            height: auto;
+        }
+        .input-list {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            > div {
+                &:not(:last-child) {
+                    margin: .5rem 0;
+                }
+                &:last-child{
+                    margin-top: .5rem;
+                }
+            }
+        }
+        .trans-box {
+            width: 100%;
+            position: relative;
+            left: 0;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            border: 1px solid #00B49D;
+            input {
+                width: $per100;
+                box-sizing: border-box;
+                background: transparent;
+                padding-left: 1rem;
+            }
+        }
+        .input-box_item {
+            height: auto;
+        }
+        .select-box {
+            width: 100%;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            border-radius: 5px; //盒子阴影修饰作用,自己随意
+            position: relative;
+            left: 0;
+            z-index: 100;
+            .select {
+                width: 100% !important;
+            }
+            &:nth-of-type(2) {
+                left: 0;
+                top: 100%;
+            }
+            &:nth-of-type(3) {
+                left: 0;
+                top: 100%
+            }
+        }
+    }
+}

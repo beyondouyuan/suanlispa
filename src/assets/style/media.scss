@@ -1,0 +1,259 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-08 14:57:02
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-08 14:59:09
+*/
+// 中屏幕pc
+@media only screen and (min-width:1441px) and (max-width:1600px) {}
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {}
+
+
+
+
+
+
+
+
+/**iphone**/
+
+@media only screen and (width:320px) and (width:768px) {}
+/**iphone**/
+
+@media only screen and (width:320px) and (width:768px) {}
+
+
+/**
+ * Landscape 横屏
+ * Portrait 竖屏
+ */
+
+
+/*#region Phones and Handhelds */
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 6 ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 6+ ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- Galaxy S3 ----------- */
+
+
+/* Portrait */
+
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#region Tablets */
+
+
+/* ----------- iPad mini ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPad 1 and 2 ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPad 3 and 4 ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}

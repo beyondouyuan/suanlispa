@@ -1,0 +1,93 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-01 02:28:34
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-08 15:02:44
+*/
+
+@import "./variable.scss";
+$contextWidth: 572;
+.row-input_box {
+    padding: 0 0 px2percent(22, $contextWidth / 2) 0;
+    h2 {
+        font-size: 24px;
+        padding: px2percent(24, $contextWidth / 2) 0;
+        text-align: center;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    .item {
+        overflow: hidden;
+        label {
+            font-size: 14px;
+            height: 100%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        input {
+            vertical-align: middle;
+            width: calc(100% - 54px);
+            box-sizing: border-box;
+            border-bottom: 1px solid #E5E5E5
+        }
+        p {
+            width: $per100;
+            font-size: 14px;
+            width: $per100;
+            height: 38px;
+            line-height: 38px;
+            border-bottom: 1px solid #E5E5E5;
+            // input {
+                
+            // }
+        }
+    }
+    .tip-amount {
+        text-align: center;
+        padding-top: px2percent(12, $contextWidth / 2);
+        padding-bottom: px2percent(54, $contextWidth / 2);
+    }
+    .row-btn {
+        width: $per100;
+        margin-top: px2percent(38, $contextWidth / 2);
+        .btn {
+            color: #FF8685;
+            height: 36px;
+            line-height: 36px;
+            width: 100%;
+            font-size: 14px;
+            font-weight: bolder;
+            outline: none;
+            border-radius: 18px;
+            border: 1px solid #D13C3C;
+            background: transparent;
+        }
+        .btn-danger {
+            border: 1px solid #D13C3C;
+        }
+    }
+}
+
+.form-bg {
+    padding: 0 px2percent(22, $contextWidth / 2);
+    color: #FFFFFF;
+}
+
+.row-input {
+    padding-bottom: px2percent(32, $contextWidth / 2);
+}
+
+.form-bottom {
+    padding: 0 px2percent(22, $contextWidth / 2);
+}
+
+input {
+    background: transparent
+}
+
+.go-in {
+    background-color: #6D9BE0;
+}
+
+.go-out {
+    background-color: #DE5557;
+}

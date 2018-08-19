@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*
+* @Author: beyondouyuan
+* @Date:   2018-06-02 18:11:57
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-01 22:15:18
+*/
+
+@import "./variable.scss";
+@import "./mixin.scss";
+
+%flex-row {
+  @include flexBox;
+  @include justify-content(flex-start);
+  @include align-items(center);
+  @include flexDirection(row);
+}
+
+.btn-lg {
+  padding: 10px 16px;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+}
+
+.btn-danger {
+    color: #FFFFFF;
+    background-color: #D9534F;
+    border-color: #D43F3A;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #337AB7;
+    border-color: #2E6DA4;
+}
+
+.btn-success {
+    color: #FFFFFF;
+    background-color: #5CB85C;
+    border-color: #4CAE4C;
+}
+
+.btn-info {
+    color: #FFFFFF;
+    background-color: #5BC0DE;
+    border-color: #46B8DA;
+}
+
+
+.btn-warning {
+    color: #FFFFFF;
+    background-color: #F0AD4E;
+    border-color: #EEA236;
+}

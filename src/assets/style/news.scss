@@ -1,0 +1,315 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-08 09:21:31
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-07-22 19:17:13
+*/
+
+@import "./variable.scss";
+
+.news-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.news-detail {
+    width: $per100; // padding: 0 px2percent(360);
+}
+
+.detail-content {
+    padding: px2percent(30) px2percent(360);
+    .sub-title {
+        margin-bottom: px2percent(14, 1200);
+        span {
+            font-size: 14px;
+            color: #777777;
+        }
+    }
+}
+
+.title-label {
+    margin-bottom: px2percent(20, 1200);
+    h2 {
+        font-size: 16px;
+        color: $baseColor;
+        display: inline-block;
+        border-bottom: 2px solid $baseColor;
+        padding-bottom: px2percent(16, 1200);
+    }
+}
+
+.news-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bar-wrapper {
+    float: left;
+    width: 25%;
+}
+
+.aside {
+    width: 100%;
+
+    li {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+        color: rgba(79, 179, 158, 1);
+        text-align: center;
+        border: 1px solid #EEEEEE;
+        transition: background-color .3s ease-in;
+        &.arrow {
+            position: relative;
+            &:after {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -4px;
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid rgba(79, 179, 158, 1);
+                border-right: 1px solid rgba(79, 179, 158, 1);
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+        }
+        &.active {
+            color: #FFFFFF;
+            background-color: rgba(79, 179, 158, 1);
+            &.arrow {
+                &:after {
+                    border-top: 1px solid rgba(255, 255, 255, 1);
+                    border-right: 1px solid rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+}
+
+.view-wrapper {
+    width: $per100;
+    padding: px2percent(30) px2percent(360);
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.main-content {
+    margin-left: calc(25% + 80px);
+    width: calc(75% - 80px);
+}
+
+
+.news-content {
+    padding-bottom: px2percent(100, 595);
+    ul {
+        width: $per100;
+        li {
+            font-size: 16px;
+            color: #333333;
+            border-bottom: 1px solid #D0D0D0;
+            position: relative; // padding: 0 px2percent(14, 595);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: color .3s ease-in, border .3s ease-in;
+            &:hover {
+                color: $baseColor;
+                border-bottom: 1px solid $baseColor;
+            }
+            .time-wrapper {
+                width: 15%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #E5E5E5;
+                margin: px2percent(12, 595) 0;
+                margin-right: px2percent(28, 595);
+                span {
+                    width: $per100;
+                    padding: px2percent(50, 595) 0;
+                    text-align: center;
+                    &:first-child {
+                        color: #FFFFFF;
+                        background-color: #CCCCCC;
+                    }
+                    &:last-child {
+                        color: #999999;
+                        background-color: #DFDFDF;
+                    }
+                }
+            }
+            &:first-child {
+                .time-wrapper {
+                    border: 1px solid $baseColor;
+                    span {
+                        &:first-child {
+                            color: #FFFFFF;
+                            background-color: $baseColor;
+                        }
+                        &:last-child {
+                            color: $baseColor;
+                            background-color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**ipad**/
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .view-wrapper {
+        padding: px2percent(20) px2percent(100);
+    }
+    .detail-content {
+        padding: px2percent(20) px2percent(100);
+    }
+}
+
+
+
+
+// 小屏幕pc
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+    .view-wrapper {
+        padding: px2percent(20) px2percent(100);
+    }
+    .detail-content {
+        padding: px2percent(20) px2percent(100);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .view-wrapper {
+        padding: 0;
+    }
+    .bar-wrapper {
+        float: none;
+        width: $per100;
+        background-color: #F5F5F5;
+        padding-bottom: 1rem;
+    }
+    .aside {
+        background-color: #FFFFFF;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li {
+            width: $per50;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            color: #777777;
+            border: none;
+            &.arrow {
+                position: relative;
+                &:after {
+                    display: none;
+                }
+            }
+            &.active {
+                color: rgba(79, 179, 158, 1);
+                background-color: #FFFFFF;
+                &.arrow {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .main-content {
+        margin-left: 0;
+        width: $per100;
+        .news-info {
+            border-top: 1px solid #EEEEEE;
+        }
+    }
+    .news-content {
+        padding-bottom: $per5;
+        ul {
+            li {
+                box-sizing: border-box;
+                padding: 1% 2%;
+                font-size: 1rem;
+                .time-wrapper {
+                    width: $per20;
+                    margin: 2% 0;
+                    margin-right: $per5;
+                    span {
+                        float: 1;
+                        padding: $per5 0;
+                        text-align: center;
+                        &:first-child {
+                            color: #FFFFFF;
+                            background-color: #CCCCCC;
+                        }
+                        &:last-child {
+                            color: #999999;
+                            background-color: #DFDFDF;
+                        }
+                    }
+                }
+                > span {
+                    flex: 1
+                }
+                &:first-child {
+                    .time-wrapper {
+                        border: 1px solid $baseColor;
+                        span {
+                            &:first-child {
+                                color: #FFFFFF;
+                                background-color: $baseColor;
+                            }
+                            &:last-child {
+                                color: $baseColor;
+                                background-color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .title-label {
+        display: none;
+    }
+    .detail-content {
+        padding: 2% 3%;
+            .title-label {
+                display: block;
+                margin-bottom: 1rem;
+                h2 {
+                    font-size: 1.2rem;
+                    text-align: justify;
+                    color: $baseColor;
+                    display: inline-block;
+                    border-bottom: none;
+                    padding-bottom: 1rem;
+                }
+            }
+        .sub-title {
+            margin-bottom: px2percent(14, 1200);
+            span {
+                font-size: 14px;
+                color: #777777;
+            }
+        }
+        .main-detail {
+            word-break:break-all;
+            p {
+                line-height: 1.5rem !important;
+                word-break:break-all;
+            }
+        }
+    }
+}

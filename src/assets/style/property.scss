@@ -1,0 +1,182 @@
+/*
+* @Author: beyondouyuan
+* @Date:   2018-07-07 14:14:26
+* @Last Modified by:   beyondouyuan
+* @Last Modified time: 2018-08-07 23:47:53
+*/
+
+@import "./variable.scss";
+.prop-view {
+    width: $per100;
+}
+
+.prop-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: px2percent(35, 820);
+    box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+}
+
+.prop-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >div {
+        flex: 1
+    }
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span {
+        &:last-child {
+            margin-top: 22px;
+        }
+    }
+}
+.data-picker {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.pick-box {
+    width: 15rem;
+    padding: .5rem 0 .5rem .5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 1px solid #EEEEEE;
+    &:not(:first-child) {
+        margin-left: 1rem;
+    }
+    span {
+        font-size: 14px;
+        padding: .1rem .6rem
+    }
+}
+.search-box {
+    margin-left: 1rem;
+}
+.a-btn {
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 14px;
+    text-align: center;
+    background-color: rgba(255, 147, 0, 1);
+}
+.search-btn {
+    display: inline-block;
+    width: 5rem;
+    padding: .5rem;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgba(255, 147, 0, 1);
+}
+.success {
+    background-color: $baseColor;
+}
+
+.serial-box {
+    margin-top: px2percent(50, 820);
+    .table-box {
+        box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+        padding-bottom: px2percent(100, 820);
+        overflow-x: scroll;
+        .tab-pannel {
+            padding: px2percent(20, 820);
+            span {
+                display: inline-block;
+                text-align: center;
+                width: px2percent(100, 820);
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #D0D0D0;
+                border: 1px solid #D0D0D0;
+                border-radius: 14px;
+                &:not(:first-child) {
+                    margin-left: px2percent(20, 820);
+                }
+                &.active {
+                    color: $baseColor;
+                    border-color: $baseColor
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .prop-list {
+        display: block;
+        padding: 1rem 0;
+        box-shadow: 0px 1px 4px 0px rgba(11, 11, 11, .2);
+    }
+    .prop-logo {}
+    .prop-action {
+        margin-top: 1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 px2percent(50, 750);
+    }
+    .a-btn {
+        width: px2percent(270, 750);
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 1rem;
+        color: #FFFFFF;
+        border-radius: .8rem;
+        text-align: center;
+    }
+    .flex-box {
+        span {
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+    }
+    .serial-box {
+        .table-box {
+            .tab-pannel {
+                width: auto;
+                padding: .5rem;
+                white-space: nowrap;
+                overflow: visible;
+                overflow-x: auto;
+                span {
+                    display: inline-block;
+                    text-align: center;
+                    width: 5rem;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    color: #D0D0D0;
+                    border: 1px solid #D0D0D0;
+                    border-radius: 14px;
+                    &:not(:first-child) {
+                        margin-left: px2percent(20, 820);
+                    }
+                    &.active {
+                        color: $baseColor;
+                        border-color: $baseColor
+                    }
+                }
+            }
+        }
+    }
+}
