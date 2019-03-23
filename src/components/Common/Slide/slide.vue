@@ -7,7 +7,7 @@
           :style="{left: left, width: width}">
             <li
               v-for="(item, index ) in slides"
-              :key="index"
+              :key="item.url"
               :style="{
                 width: sliderWidth,
                 height: styles.height,

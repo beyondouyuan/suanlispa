@@ -2,6 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+
 
 import App from './App'
 import router from './router'
@@ -13,6 +17,7 @@ import VueClipboard from 'vue-clipboard2'
 import Loading from '@/components/Common/LoadingModal'
 import Pagination from '@/components/Common/Pagination'
 import TableBox from '@/components/Common/TableBox'
+import TableFilter from '@/components/TableFilter'
 import Dialog from '@/components/Common/Dialog'
 import Confirm from '@/components/Common/Confirm'
 
@@ -21,7 +26,7 @@ import MetaInfo from 'vue-meta-info'
 
 
 Vue.use(MetaInfo)
-
+Vue.use(ElementUI)
 import Toast from '@/components/Common/Toast/toast'
 import Alert from '@/components/Common/Alert/alert'
 
@@ -56,6 +61,7 @@ Vue.config.productionTip = false
 Vue.component('Loading', Loading)
 Vue.component('Pagination', Pagination)
 Vue.component('TableBox', TableBox)
+Vue.component('TableFilter', TableFilter)
 Vue.component('Dialog', Dialog)
 Vue.component('Confirm', Confirm)
 

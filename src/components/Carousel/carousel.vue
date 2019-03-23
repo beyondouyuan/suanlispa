@@ -1,14 +1,14 @@
 <template>
     <div class="carousel-show" @mouseover="handleClearInterval" @mouseout="handleRunInterval">
         <transition-group tag="ul" class='carousel-ul' :name="name">
-            <li v-for="(item, index ) in carousels" :key="index" v-show="index===currentIndex">
+            <li v-for="(item, index ) in carousels" :key="item.url" v-show="index===currentIndex">
                 <a :href="item.to_url" :target="target">
                   <img :src="item.url" alt="" style="width: 100%; height: 100%">
                 </a>
             </li>
         </transition-group>
         <ul class="carousel-pages">
-            <li v-for="(item, index) in carousels" @click="go(index)" class="carousel-page-point">
+            <li v-for="(item, index) in carousels" :key="item.url" @click="go(index)" class="carousel-page-point">
                 <a :class="{'active': index === currentIndex}">{{ index + 1 }}</a>
             </li>
         </ul>
